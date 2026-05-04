@@ -3,11 +3,12 @@ import Article from "./Article";
 
 //ArticleLIst component - renders all articles
 //Receives: articles array from App.jsx 
-function ArticleList({ articles }) {
+function ArticleList({ posts = [] }) {
   return (
     <main>
-      {articles.map((article) => (
-        <Article key={article.id} title={article.title} date={article.date} preview={article.preview} />
+      {posts.map((article) => (
+        <Article 
+        key={article.id} title={article.title} date={article.date} preview={article.preview} />
       ))}
     </main>
   );
